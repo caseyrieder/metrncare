@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { COLORS } from '../../styles';
+import Button from '../../components/Button';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,14 +19,22 @@ const styles = StyleSheet.create({
   },
 });
 
-const Home = () => {
+const Details = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.main}>
         Details
       </Text>
+      <Button
+        text="Home"
+        onPress={props.onHomePress}
+      />
     </View>
   );
 };
 
-export default Home;
+Details.propTypes = {
+  onHomePress: React.PropTypes.func,
+};
+
+export default Details;
