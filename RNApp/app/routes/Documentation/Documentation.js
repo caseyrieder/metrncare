@@ -19,32 +19,22 @@ const styles = StyleSheet.create({
   },
 });
 
-const Home = (props) => {
+const Documentation = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.main}>
-        Home
+        Details
       </Text>
       <Button
-        text="Details"
-        onPress={props.onDetailsPress}
-      />
-      <Button
-        text="Exercises"
-        onPress={props.onExercisesPress}
-      />
-      <Button
-        text="Documentation"
-        onPress={props.onDocumentationPress}
+        text="Patients"
+        onPress={props.onPatientsPress}
       />
     </View>
   );
 };
 
-Home.propTypes = {
-  onDetailsPress: React.PropTypes.func,
-  onExercisesPress: React.PropTypes.func,
-  onDocumentationPress: React.PropTypes.func,
+Documentation.propTypes = {
+  onPatientsPress: React.PropTypes.func,
 };
 
-export default Home;
+export default Documentation;

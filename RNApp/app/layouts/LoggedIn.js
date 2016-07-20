@@ -4,6 +4,8 @@ import TabNavigator from 'react-native-tab-navigator';
 import { Icon as ProfileIcon } from '../routes/Profile';
 import { Icon as HomeIcon } from '../routes/Home';
 import { Icon as DetailsIcon } from '../routes/Details';
+import { Icon as ExercisesIcon } from '../routes/Exercises';
+// import { Icon as DocumentationIcon } from '../routes/Documentation';
 import ExNavigator from '@exponent/react-native-navigator';
 import Routes from '../routes';
 
@@ -60,6 +62,7 @@ class LoggedInLayout extends React.Component {
     return (
       <TabNavigator>
         {this.renderTabItem('Home', Routes.getHomeRoute(), HomeIcon)}
+        {this.renderTabItem('Exercises', Routes.getExercisesRoute(), ExercisesIcon)}
         {this.renderTabItem('Details', Routes.getDetailsRoute(), DetailsIcon)}
         {this.renderTabItem('Profile', Routes.getProfileRoute(), ProfileIcon)}
       </TabNavigator>

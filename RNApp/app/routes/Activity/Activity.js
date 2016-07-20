@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import { COLORS } from '../../styles';
 import Button from '../../components/Button';
 
@@ -19,32 +19,27 @@ const styles = StyleSheet.create({
   },
 });
 
-const Home = (props) => {
+const Activity = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.main}>
-        Home
+        Activity
       </Text>
-      <Button
-        text="Details"
-        onPress={props.onDetailsPress}
-      />
-      <Button
-        text="Exercises"
-        onPress={props.onExercisesPress}
-      />
-      <Button
-        text="Documentation"
-        onPress={props.onDocumentationPress}
-      />
+      <Text style={styles.main}>
+        breakdown of the activity info goes here
+      </Text>
+      <TouchableHighlight
+        onPress={() => {props.onScoringPress
+          this.setModalVisible(!this.state.modalVisible)
+      }}>
+        <Text>Scoring Modal</Text>
+      </TouchableHighlight>/>
     </View>
   );
 };
 
-Home.propTypes = {
-  onDetailsPress: React.PropTypes.func,
-  onExercisesPress: React.PropTypes.func,
-  onDocumentationPress: React.PropTypes.func,
+Activity.propTypes = {
+  onScoringPress: React.PropTypes.func,
 };
 
-export default Home;
+export default Activity;
